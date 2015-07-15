@@ -21,14 +21,19 @@
 <p>Llista de negocis i particulars que funcionen amb <a href="http://somenergia.coop">somenergia</a> i volen fer-ho públic.</p>
 <div id="map"></div>
 	<script>
-		// Tipus de negocis
-		var public = new L.LayerGroup(),
-		    aliments = new L.LayerGroup();
+		// Tipus de negocis: per ordre alfabètic
+		var aliments = new L.LayerGroup(),
+		    associacions = new L.LayerGroup(),
+		    public = new L.LayerGroup();
 
 		// Marcadors
 		L.marker([39.621817, 2.5432139])
 			.bindPopup("<b>Bodegas Son Puig</b><br /><ul><li>Tipus: bodega</li><li>Adreça: Camí Son Puig, s/n. 07194 Puigpunyent (Mallorca). Illes Balears.</li><li>web: <a href='http://www.sonpuig.com'>sonpuig.com</a></li><li>referències:<a href='https://blog.somenergia.coop/grupos-locales/2015/03/bodegues-son-puig-el-primer-celler-amb-electricitat-100-renovable/'>blog.somenergia</a></li></ul>")
 			.addTo(aliments);
+
+		L.marker([39.58417, 2.64788])
+			.bindPopup("<b>AMPEB</b><br /><ul><li>Tipus: associació</li><li>Adreça: carrer Camí del Molí den Perot, 10. Palma (Mallorca). Illes Balears.</li><li>web: <a href='https://ampebbaleares.wordpress.com/'>oficial</a></li><li>referències: <a href='https://blog.somenergia.coop/grupos-locales/baleares/mallorca/2015/07/lassociacio-de-majors-aturats-ampeb-tambe-contracta-som-energia/'>blog.somenergia</a></li></ul>")
+			.addTo(associacions);
 
 		L.marker([39.64712, 2.77881])
 			.bindPopup("<b>Ajuntament de Santa Maria</b><br /><ul><li>Tipus: ajuntament</li><li>Adreça: Plaça de la Vila, 1. 07320 Santa Maria del Camí (Mallorca). Illes Balears.</li><li>web: <a href='http://www.ajsantamariadelcami.org/'>oficial</a></li><li>referències: <a href='http://dbalears.cat/part-forana/2015/01/23/284577/ajuntament-santa-maria-aprova-fer-soci-som-energia.html'>dbalears.cat</a></li></ul>")
@@ -46,7 +51,7 @@
 		var map = L.map('map', {
 			center: [39.6205, 2.9636],
 			zoom: 9,
-			layers: [streets, public, aliments]
+			layers: [streets, aliments, associacions, public]
 		});
 
 		var baseLayers = {
@@ -57,7 +62,8 @@
 
 		var overlays = {
 			"Productes alimentaris": aliments,
-			"Administracions públiques": public
+			"Administracions públiques": public,
+			"Associacions": associacions
 		};
 
 		L.control.layers(baseLayers, overlays).addTo(map);
