@@ -13,7 +13,7 @@ var points = L.geoCsv (null, {
     firstLineTitles: true,
     fieldSeparator: fieldSeparator,
     onEachFeature: function (feature, layer) {
-        var popup = '<div class="popup-content"><table class="table table-striped table-bordered table-condensed">';
+        var popup = '<div class="popup-content">';
         for (var clave in feature.properties) {
             var title = points.getPropertyTitle(clave).strip();
             var attr = feature.properties[clave];
@@ -24,10 +24,10 @@ var points = L.geoCsv (null, {
                 attr = '<a target="_blank" href="' + attr + '">'+ attr + '</a>';
             }
             if (attr) {
-                popup += '<tr><th>'+title+'</th><td>'+ attr +'</td></tr>';
+                popup += '<b>'+title+'</b><br/>'+ attr +'</br></br>';
             }
         }
-        popup += "</table></popup-content>";
+        popup += "</popup-content>";
         layer.bindPopup(popup, popupOpts);
     },
     filter: function(feature, layer) {
@@ -84,7 +84,7 @@ var addCsvMarkers = function() {
         // pass
     }
     if (total > 0) {
-        $('#search-results').html("Showing " + hits + " of " + total);
+        $('#search-results').html("Mostrant " + hits + " elements de " + total);
     }
     return false;
 };
