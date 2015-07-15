@@ -30,8 +30,7 @@ La llista del programari emprat és:
 
 L'arxiu de les dades es troba a la ruta `data/data.csv`. Aquest arxiu és un arxiu de tipus CSV separat per `|`. Els camps que conté són:
   * `Nom`: el nom del client. Per exemple `Botiga de taps de Suro Joan X`
-  * `Tipus`: el tipus de client. `particular`, `taps de suro`, etc.
-  * `Categoria`: sector al qual petany. `Administracions públiques`, `Associacions`, etc.
+  * `Paraules clau`: les paraules clau que surtiran a la cerca. Per exemple, `suro`, `taps`, `botiga`
   * `Adreça`: adreça completa
   * `lat`: latitud
   * `lng`: longitud
