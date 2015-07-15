@@ -25,3 +25,16 @@ La llista del programari emprat és:
   * [Twitter Boostrap](http://twitter.github.io/bootstrap/)
   * [jQuery](http://jquery.com/)
 
+
+# Arxiu CSV #
+
+L'arxiu de les dades es troba a la ruta `data/data.csv`. Aquest arxiu és un arxiu de tipus CSV separat per `|`. Els camps que conté són:
+  * `Nom`: el nom del client. Per exemple `Botiga de taps de Suro Joan X`
+  * `Tipus`: el tipus de client. `particular`, `taps de suro`, etc.
+  * `Categoria`: sector al qual petany. `Administracions públiques`, `Associacions`, etc.
+  * `Adreça`: adreça completa
+  * `lat`: latitud
+  * `lng`: longitud
+  * `Web`: web oficial
+  * `Referències`: referències oficials on apareix la informació de què és soci de somenergia. Opcional.
+  
