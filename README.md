@@ -8,7 +8,7 @@ Existeix un projecte similar *[Negocios Amigos](https://blog.somenergia.coop/gru
 
 ## Instal·lació ##
 
-Descarregueu-vos el contingut d'aquest directori i obriu el fitxer `index.html` amb el vostre navegador web. Si disposeu de git, podeu [clonar](https://github.com/somenxavier/powered-by-somenergia.git) aquest repositori.
+Descarregueu-vos el contingut d'aquest directori (botó dret `Download ZIP` o bé premeu [aquí](https://github.com/somenxavier/powered-by-somenergia/archive/gh-pages.zip)) i obriu el fitxer `index.html` amb el vostre navegador web. Si disposeu de git, podeu [clonar](https://github.com/somenxavier/powered-by-somenergia.git) aquest repositori.
 
 ## Llicència ##
 
